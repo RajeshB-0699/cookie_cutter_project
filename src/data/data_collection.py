@@ -5,6 +5,7 @@ from sklearn.model_selection import train_test_split
 import yaml
 
 
+
 def load_data(filepath : str) -> pd.DataFrame:
     try:
         return pd.read_csv(filepath)
@@ -45,7 +46,7 @@ def save_data(df:pd.DataFrame, filepath:str) -> None:
 def main():
     data_filepath = "https://raw.githubusercontent.com/DataThinkers/Datasets/refs/heads/main/DS/water_potability.csv"
     params_filepath = "params.yaml"
-    raw_data_path = os.path.join("df","raw")
+    raw_data_path = os.path.join("data","raw")
 
     df = load_data(data_filepath)
     test_size = load_params(params_filepath)

@@ -65,9 +65,9 @@ def save_model(model : RandomForestClassifier,filepath : str) -> None:
 def main():
     try:
         path_params = "params.yaml"
-        train_processed_path  = './df/processed/train_processed.csv'
+        train_processed_path  = './data/processed/train_processed.csv'
     #    test_processed_path  = './df/processed/test_processed.csv'
-        model_name = "model.pkl"
+        model_name = "models/model.pkl"
 
         estimators = load_params(path_params)
         df = load_data(train_processed_path)

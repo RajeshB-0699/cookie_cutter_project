@@ -33,8 +33,8 @@ def save_file(df : pd.DataFrame, filepath : str) -> None:
 
 def main():
     try:
-        train_raw_data_path = "./df/raw/train.csv"
-        test_raw_data_path = "./df/raw/test.csv"
+        train_raw_data_path = "./data/raw/train.csv"
+        test_raw_data_path = "./data/raw/test.csv"
         #processed_data_path = "./df/processed"
 
         train_data = load_data(train_raw_data_path)
@@ -43,7 +43,7 @@ def main():
         train_processed = fill_missing_with_median(train_data)
         test_processed = fill_missing_with_median(test_data)
 
-        processed_data_path = os.path.join("df","processed")
+        processed_data_path = os.path.join("data","processed")
         os.makedirs(processed_data_path)
 
         save_file(train_processed,os.path.join(processed_data_path,"train_processed.csv"))
